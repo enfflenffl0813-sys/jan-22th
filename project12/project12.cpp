@@ -98,6 +98,30 @@ int main()
 	printf("평균: %.2f\n", total / 5.F);
 
 
+	// 이 배열의 아이템들의 개수를 출력허새요.
+	short numbers[] = { 9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9};
+	printf("numbers의 아이템 개수 : %d개\n"); /*sizeof(numbers) / sizeof(short));*/
+	int index = sizeof(numbers) / sizeof(short);
+
+	int arr2[1];
+	printf("arr2의 크기(bytes): %d\n", sizeof(arr2));
+	
+
+
+	//numbers 배열의 가장 마지막 아이템에 100을 대입하고 numbers 배열의 인덱싱을 이용하여 그 값을 출력하세요. 
+	// x에는 인덱스 번호를 출력 numbers 배열의 가장 마지막 아이템 : numbers[x] = 100
+
+	numbers[index - 1] = 100;
+	printf("numbers배열의 가장 마지막 아이템 : numbers[%d] = %d\n", index - 1, numbers[index - 1]);
+
+
+		// for 문을 이용하여  numbers 배열에1~ 개수까지의 수를 각 아이템에 순서대로 대입하기
+	for (int i = 0; i < index; i++)
+	{
+		numbers[i] = i + 1;
+		}
+
+
 
 
 	return 0;
