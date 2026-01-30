@@ -51,5 +51,52 @@ int main()
    /*fgets(name, 20, stdin);
    printf("%s\n", name);*/
 
+   fgets(name, 20, stdin);       // 공백문자를 입력받을 수 있다! 
+   len = strlen(name);     //입력받은 문자열의 길이 
+   name[len - 1] = 0;          // \n 제거
+   printf("name : %s\n", name);         // Tom Cruze\n\n
+
+
+
+   /*
+   입력 데이터 : "Tom Cruze(엔터 = \n)"
+   scanf : "Tom" 
+   fgets : "Tom Cruze\n"
+   */
+
+   // 문자열길이 : strlen
+   // 문자열비교 : strcmp
+
+
+   printf("sz : %s\n", sz);        //Hello
+
+   // 문자열 대입 : 
+   //sz < === name
+   //sz = "ABCDE";
+   // 10 = "abc";
+   strcpy(sz, "ABCDE");                // sz에 "ABCDE"를 대입 
+   printf("sz : %s\n", sz);                  // ABCDE
+
+   // sz의 공간이 6byte인데 7byte의 값을 대입시도하면서... 
+   //Overflow Runtime Error 가 발생한다!!!! 절대로 runtime error가 발생하도록 하면 안됨. 데이터 다 날라가뮤(아래)
+   //strcpy(sz, "ABCDEF");                // sz에 "ABCDEF"를 대입 시도
+   //printf("sz : %s\n", sz);                  // ABCDE
+
+   // 오류의 종류
+   // syntax error ( compile error) 실행오류
+   // runtime error 
+   // logical error 
+
+   // 문자열 추가 
+   // s = 'abc'
+   // s = s + 'def'
+   // s = 'abcdef'
+   // name [20] : 알파벳 19글자까지 저장할 수 있다. 
+   strcat(name, "plus_string");             //name = name + "plus string";  원래 있던 문자열에 문자열 추가하기
+   printf("name: %s\n", name);
+
+
+
+
     return 0;
 }
